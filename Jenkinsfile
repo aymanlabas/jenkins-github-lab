@@ -11,7 +11,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                echo 'Build en cours'
+                echo  'Build automatique déclenché par GitHub Webhook'
                 sh 'echo Build OK'
             }
         }
