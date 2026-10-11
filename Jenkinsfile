@@ -1,30 +1,32 @@
+
 pipeline {
     agent any
 
     stages {
         stage('Checkout') {
             steps {
-                echo 'Le code est disponible dans le workspace'
+                echo 'Le workspace est pret'
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Build en cours'
-                bat 'echo Build OK'
+                sh 'echo Build OK'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Execution des tests'
-                bat 'echo Tests OK'
+                sh 'echo Tests OK'
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Simulation du deploiement'
+                sh 'echo Deploiement OK'
             }
         }
     }
